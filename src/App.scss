@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$ff: 'Montserrat', sans-serif;
+$bgc: #C0F1FF;
+
+%center{
+  margin: 0 auto;
+}
+
+%btn{
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.1);
+  cursor: pointer;
+  margin-left: 5px;
+}
+%btn:hover{
+  background-color: #A1A1A1;
+}
+
+body {
+  background-color: #F5F5F5;
+  font-family: $ff;
+  margin: 0;
+}
+
+.App {
+  max-width: 1200px;
+  @extend %center
+}
+
+.header {
+  border-radius: 0px 0px 10px 10px;
+  background-color: $bgc;
+  text-align: center;
+  height: 30px;
+  font-size: 20px;
+}
+
+.content {
+  background-color: $bgc;
+  margin-top: 15px;
+  border-radius: 10px 10px 10px 10px;
+  min-height: calc(100vh - 90px);
+  padding: 20px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid black;
+  margin-top: 10px;
+  button {
+    @extend %btn;
+  }
+}
+
+.completed {
+  background-color: #7FFFB2;
+}
+
+.addTodo {
+  margin-top: 10px;
+  display: flex;
+  input {
+    height: 30px;
+    flex: auto;
+  }
+  button {
+    @extend %btn;
+  }
+}
+
+.filter {
+  text-align: center;
+  button {
+    @extend %btn;
+  }
+}
+
+.todo-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
